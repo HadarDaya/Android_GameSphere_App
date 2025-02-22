@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/almost_black"
+    android:backgroundTint="@color/almost_black"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadingEdge="horizontal"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:textDirection="rtl">
+
+            <!-- Game Image -->
+            <ImageView
+                android:id="@+id/rowItemGameFrag_image"
+                android:layout_width="170dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:contentDescription="gameImage"
+                android:outlineProvider="none"
+                android:scaleType="centerInside"
+                tools:srcCompat="@tools:sample/avatars"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="8dp"
+                tools:ignore="RtlSymmetry">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <!-- Game name -->
+                    <TextView
+                        android:id="@+id/rowItemGameFrag_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:gravity="left"
+                        android:text="Name"
+                        android:textColor="@color/white"
+                        android:textDirection="ltr"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,KeyboardInaccessibleWidget,RtlHardcoded" />
+
+                    <!-- Favorites Button -->
+                    <ImageButton
+                        android:id="@+id/rowItemGameFrag_favoriteBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/rowItemGameFrag_name"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:backgroundTint="@color/almost_black"
+                        android:contentDescription="favoriteBtn"
+                        app:srcCompat="@drawable/baseline_favorite_border_red"
+                        tools:ignore="HardcodedText" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Release Year -->
+                    <TextView
+                        android:id="@+id/rowItemGameFrag_releaseYear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:gravity="center"
+                        android:paddingEnd="10dp"
+                        android:text="Release Year"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="16sp"
+                        tools:ignore="HardcodedText,RtlSymmetry" />
+
+                    <!-- Single player -->
+                    <ImageView
+                        android:id="@+id/rowItemGameFrag_singlePlayerIcon"
+                        android:layout_width="16dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_horizontal"
+                        android:contentDescription="single player"
+                        android:paddingRight="2dp"
+                        android:src="@drawable/user_icon"
+                        tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+                    <!-- Multi player -->
+                    <ImageView
+                        android:id="@+id/rowItemGameFrag_multiPlayerIcon"
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center_horizontal"
+                        android:contentDescription="multi player"
+                        android:paddingLeft="2dp"
+                        android:src="@drawable/group_icon"
+                        tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <!-- Star icon -->
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="starIcon"
+                        app:srcCompat="@drawable/baseline_star"
+                        tools:ignore="HardcodedText" />
+
+                    <!-- Avg rate -->
+                    <TextView
+                        android:id="@+id/rowItemGameFrag_avgRate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:paddingRight="20dp"
+                        android:text="10.0"
+                        android:textColor="#979797"
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+                    <!-- Rate star icon -->
+                    <ImageView
+                        android:id="@+id/rowItemGameFrag_rateStarImg"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:contentDescription="rateStarImg"
+                        app:srcCompat="@drawable/baseline_star_border"
+                        tools:ignore="HardcodedText" />
+
+                    <!-- User rate -->
+                    <TextView
+                        android:id="@+id/rowItemGameFrag_rateBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:gravity="left"
+                        android:text="Rate"
+                        android:textColor="@color/link_blue"
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText,KeyboardInaccessibleWidget,RtlHardcoded" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/rowItemGameFrag_description"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
+            android:gravity="left"
+            android:padding="10dp"
+            android:text="Description"
+            android:textColor="@color/white"
+            android:textDirection="ltr"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <!-- Read More -->
+        <TextView
+            android:id="@+id/rowItemGameFrag_readMore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:gravity="end"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="Read More"
+            android:textColor="@color/link_blue"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

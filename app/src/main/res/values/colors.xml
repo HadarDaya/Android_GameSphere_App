@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="almost_black">#1A1A1A</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="neon_pink">#FF3B94</color>
+    <color name="link_blue">#4DA6FF</color>
+    <color name="gray">#333333</color>
+    <color name="neon_purple">#9C4AE5</color>
+    <color name="neon_yellow">#EAFF5B</color>
+    <color name="neon_green">#17D84D</color>
+    <color name="red">#FF003B</color>
+</resources>

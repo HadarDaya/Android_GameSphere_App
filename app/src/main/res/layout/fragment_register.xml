@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".fragment.RegisterFragment">
+
+    <!-- Registration Animation Lottie-->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/regFrag_decorLottie"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:lottie_rawRes="@raw/register_lottie"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp"
+        android:backgroundTint="@color/almost_black">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <!-- Email -->
+            <EditText
+                android:id="@+id/regFrag_email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/baseline_email"
+                android:drawablePadding="8dp"
+                android:hint="Email"
+                android:textColorHint="@android:color/darker_gray"
+                android:inputType="textEmailAddress"
+                android:padding="8dp"
+                android:textColor="@color/white"
+                android:textColorHighlight="@color/cardview_dark_background"
+                tools:ignore="Autofill,HardcodedText,RtlHardcoded" />
+
+            <!-- Username -->
+            <EditText
+                android:id="@+id/regFrag_username"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/baseline_person_white"
+                android:drawablePadding="8dp"
+                android:hint="Username"
+                android:textColorHint="@android:color/darker_gray"
+                android:inputType="textVisiblePassword"
+                android:padding="8dp"
+                android:textColor="@color/white"
+                android:textColorHighlight="@color/cardview_dark_background"
+                tools:ignore="Autofill,HardcodedText,RtlHardcoded" />
+
+            <!-- Password -->
+            <EditText
+                android:id="@+id/regFrag_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/baseline_lock"
+                android:drawablePadding="8dp"
+                android:hint="Password"
+                android:textColorHint="@android:color/darker_gray"
+                android:inputType="textPassword"
+                android:padding="8dp"
+                android:textColor="@color/white"
+                android:textColorHighlight="@color/cardview_dark_background"
+                tools:ignore="Autofill,HardcodedText,RtlHardcoded" />
+
+            <!-- Verify Password -->
+            <EditText
+                android:id="@+id/regFrag_verifyPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/baseline_lock"
+                android:drawablePadding="8dp"
+                android:hint="Verify Password"
+                android:textColorHint="@android:color/darker_gray"
+                android:inputType="textPassword"
+                android:padding="8dp"
+                android:textColor="@color/white"
+                android:textColorHighlight="@color/cardview_dark_background"
+                tools:ignore="Autofill,HardcodedText,RtlHardcoded" />
+
+            <!-- SignUp Button -->
+            <Button
+                android:id="@+id/regFrag_signUpButton"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@android:color/transparent"
+                android:text="Sign Up"
+                android:textSize="18sp"
+                android:textColor="@color/neon_pink"
+                app:strokeColor="@color/neon_pink"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Login Option-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Have an account?"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textColor="@color/link_blue"
+            android:layout_marginBottom="20dp"
+            android:linksClickable="true"
+            android:focusable="true"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/regFrag_login"
+            android:text="Log In"
+            android:textSize="16sp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@android:color/transparent"
+            android:textColor="@color/link_blue"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+</LinearLayout>

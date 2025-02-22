@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.LoginFragment"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <!-- Login Animation Lottie-->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loginFrag_decorLottie"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/login_lottie" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/loginFrag_card"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp"
+        android:backgroundTint="@color/almost_black">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal">
+
+            <!-- Email -->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/loginFrag_email"
+                android:drawableLeft="@drawable/baseline_email"
+                android:inputType="textEmailAddress"
+                android:drawablePadding="8dp"
+                android:hint="Email"
+                android:textColorHint="@android:color/darker_gray"
+                android:padding="8dp"
+                android:textColor="@color/white"
+                android:textColorHighlight="@color/cardview_dark_background"
+                android:layout_marginTop="40dp"
+                tools:ignore="Autofill,HardcodedText,RtlHardcoded" />
+
+            <!-- Password -->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/loginFrag_password"
+                android:drawableLeft="@drawable/baseline_lock"
+                android:drawablePadding="8dp"
+                android:hint="Password"
+                android:padding="8dp"
+                android:inputType="textPassword"
+                android:textColorHint="@android:color/darker_gray"
+                android:textColor="@color/white"
+                android:textColorHighlight="@color/cardview_dark_background"
+                android:layout_marginTop="20dp"
+                tools:ignore="Autofill,HardcodedText,RtlHardcoded" />
+
+            <!-- Login Button -->
+            <Button
+                android:id="@+id/loginFrag_loginButton"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@android:color/transparent"
+                android:text="Login"
+                android:textSize="18sp"
+                android:textColor="@color/neon_pink"
+                app:strokeColor="@color/neon_pink"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Registration Option-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Not yet registered?"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:id="@+id/loginFrag_signupNowText"
+            android:textColor="@color/link_blue"
+            android:layout_marginBottom="20dp"
+            android:linksClickable="true"
+            android:focusable="true"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/loginFrag_signUpButton"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@android:color/transparent"
+            android:text="Sign Up"
+            android:textColor="@color/link_blue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+
+</LinearLayout>

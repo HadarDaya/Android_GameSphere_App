@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Floating Star Decoration -->
+    <ImageView
+        android:id="@+id/decorStar"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_gravity="top|center_horizontal"
+        android:contentDescription="decorStar"
+        android:src="@drawable/decor_stars_rating"
+        android:translationY="-10dp"
+        android:translationZ="1000dp"
+        tools:ignore="HardcodedText" />
+
+    <!-- Main Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@color/almost_black"
+        android:elevation="10dp"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="12dp"
+            android:text="Rate This Game"
+            android:textColor="@color/neon_yellow"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <!-- Rating Bar -->
+        <RatingBar
+            android:id="@+id/ratingPopup_ratingBar"
+            style="@style/Widget.AppCompat.RatingBar.Indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:isIndicator="false"
+            android:numStars="10"
+            android:progressBackgroundTint="@color/white"
+            android:rating="0"
+            android:scaleX=".9"
+            android:scaleY=".9"
+            android:stepSize="1" />
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/ratingPopup_submitBtn"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:text="Submit"
+            android:textColor="@color/neon_yellow"
+            android:textStyle="bold"
+            app:strokeColor="@color/neon_yellow"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+</FrameLayout>

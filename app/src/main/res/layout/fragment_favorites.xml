@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.FavoritesFragment">
+
+    <!-- Recyclerview Favorites -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/favoritesFrag_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="110dp"/>
+
+    <!-- No Data Animation -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/favoritesFrag_noDataAnimation"
+        android:layout_width="500dp"
+        android:layout_height="500dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/no_data_lottie" />
+
+        <!-- Fullscreen Loading Animation Overlay -->
+        <FrameLayout
+            android:id="@+id/favoritesFrag_loadingContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"
+            android:visibility="gone"
+            android:alpha="0.8">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/favoritesFrag_loadingAnimation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                app:lottie_rawRes="@raw/loading_lottie"
+                app:lottie_autoPlay="false"
+                app:lottie_loop="true"/>
+        </FrameLayout>
+</FrameLayout>
