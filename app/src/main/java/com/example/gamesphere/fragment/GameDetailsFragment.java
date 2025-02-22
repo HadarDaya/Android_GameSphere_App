@@ -193,7 +193,8 @@ public class GameDetailsFragment extends Fragment
 
         titleView.setText(gameItem.getName());
         releaseYearView.setText(String.valueOf(gameItem.getReleaseYear()));
-        avgRateView.setText(String.valueOf(gameItem.getAvgRate()));
+        @SuppressLint("DefaultLocale") String roundAvgRate = String.format("%.1f", gameItem.getAvgRate());
+        avgRateView.setText(roundAvgRate);
         descriptionView.setText(gameItem.getDescription());
 
         developerRepository.fetchDeveloperById(gameItem.getDeveloperID(), new DeveloperRepository.DeveloperCallback() {

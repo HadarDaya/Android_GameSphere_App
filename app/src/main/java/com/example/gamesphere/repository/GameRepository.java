@@ -178,13 +178,12 @@ public class GameRepository {
     /**
      * Asynchronous function calculates fields numOfRaters, avgRate for the given gameID.
      * @param gameID    the game which is rated
-     * @param userID    the user who rates
      * @param newUserRating     the new rating (as selected by user)
      * @param oldUserRating     the new rating (as selected previously by user)
      * @param alreadyRated      boolean
      * @return a task with updatedValues (a map with keys: numOfRaters, avgRate and keys: their values)
      */
-    public Task<Map<String, Object>> modifyRateByGameID(Long gameID, String userID, float newUserRating,
+    public Task<Map<String, Object>> modifyRateByGameID(Long gameID, float newUserRating,
                                                         float oldUserRating, boolean alreadyRated)
     {
         TaskCompletionSource<Map<String, Object>> taskCompletionSource = new TaskCompletionSource<>();

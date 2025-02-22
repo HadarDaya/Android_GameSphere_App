@@ -97,7 +97,7 @@ public class RatingHandlerUtils {
         userGameRateRepository.modifyRatingForGameAndUser(userID, gameID, newUserRating)
                 .addOnSuccessListener(aVoid -> {
                     // Update 'Game' table
-                    gameRepository.modifyRateByGameID(gameID, userID, newUserRating, oldUserRating, alreadyRated)
+                    gameRepository.modifyRateByGameID(gameID, newUserRating, oldUserRating, alreadyRated)
                             .addOnSuccessListener(updatedValues -> {
                                 if (updatedValues != null) {
                                     Object avgRateObj = updatedValues.get("avgRate");
