@@ -74,9 +74,7 @@ The application is built using **Android SDK** and integrates **Firebase** for u
 ⭐ Rate games and check **community ratings**.  
 🔍 Search, filter, and sort game collections.
 
----
-
-### Screenshots and Descriptions of the App: 📱 ✨ 📸:
+## Screenshots and Descriptions of the App: 📱 ✨ 📸:
 
 #### 1. **Home Screen 🏠**
 This is the main page where users can explore all the available games.
