@@ -6,7 +6,7 @@
 The app consists of two user roles: **regular users** and **administrator**, each with unique capabilities:
 
 - **Unregistered Users**:
-  - Browse an extensive collection of games, including detailed descriptions, images, and trailers.<br>(cannot rate games or add them to favorites).
+  - Browse an extensive collection of games, including detailed descriptions, images, and trailers <br>(cannot rate games or add them to favorites).
 
 - **Registered Users**:
   - Browse an extensive collection of games, including detailed descriptions, images, and trailers.
