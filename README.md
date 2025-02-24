@@ -3,17 +3,19 @@
 ### 📌 Overview
 
 **GameSphere** is a mobile application designed for exploring, rating, and managing video games.  
-The app consists of two user roles: **regular users** and **administrators**, each with unique capabilities:
+The app consists of two user roles: **regular users** and **administrator**, each with unique capabilities:
 
-- **Regular Users**:
+- **Unregistered Users**:
+  - Browse an extensive collection of games, including detailed descriptions, images, and trailers.(cannot rate games or add them to favorites).
+
+- **Registered Users**:
   - Browse an extensive collection of games, including detailed descriptions, images, and trailers.
   - Rate games and add them to their favorites list.
   - Edit personal details such as username, email, and password.
 
-- **Administrators**:
+- **Administrator**:
   - Enjoy all the privileges of regular users (excluding personal detail edits).
   - Add new games to the app, including image and video trailer uploads, and detailed game information.
-  - Manage game entries efficiently.
 
 The application is built using **Android SDK** and integrates **Firebase** for user authentication and database management.  
 **Cloudinary** is utilized for optimized cloud-based image handling, ensuring secure and efficient image storage.
